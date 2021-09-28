@@ -1,77 +1,78 @@
 
 <% layout('/layouts/boilerplate') %> 
 
-<div class="mt-5">
-    <h1 class="title"><%= theUser.username %>'s Movie Collection </h1>
+<div>
+    <div class="mt-5">
+        <h1 class="title"><%= theUser.username %>'s Movie Collection </h1>
 
-    <form action="/movie">
-        <button class="button is-rounded">Back to Moive Search</button>
-    </form>
-    
-</div>
-
-</div>
-    <div  class="margin-top-large is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-left">
-
-
-        <% for(each of theUser.movie){ %> 
-            <div class="column is-2 box m-4" >
-
-
-
-
-
-                    <h5 class=" is-size-4 title"><%= each.title %> </h5>
-
-
-                    <p><%= each.date || 'Unkown'%> </p>
-
-                    
-
-                    <form action="/movie/<%= theUser._id %>/movieInfo/<%= each._id %>" >
-                        <button class="button is-info is-outlined is-small is-rounded mt-3">
-                            <span>Add Review</span>
-                            <span class="icon is-small">
-                                <i class="far fa-comment"></i>
-                            </span>
-                          </button>
-                    </form>
-
-
-
-                    <form action="/movie/<%= theUser._id %>/movieInfo/<%= each._id %>?_method=delete" method="POST">
-                        <button class="button is-danger is-outlined is-small is-rounded mt-3">
-                            <span>Delete</span>
-                            <span class="icon is-small">
-                              <i class="fas fa-times"></i>
-                            </span>
-                          </button>
-                    </form>
-
-
-
-                    <% try{ %> 
-                    <div class="image mt-5" >
-                        <a href="/movie/<%= theUser._id %>/movieInfo/<%= each._id %>">
-
-                            <%let imgSrc=each.image %> 
-                            <img width="256px" 
-                            src="<%= imgSrc ||"https://complianz.io/wp-content/uploads/2019/03/placeholder-300x202.jpg" %>" 
-                            >
-
-                        </a>
-
-                    </div>
-                    <% }catch(e){} %>  
-
-
-                    
-            </div>
-
-        <% } %> 
-
+        <form action="/movie">
+            <button class="button is-rounded">Back to Moive Search</button>
+        </form>
+        
     </div>
 
+    </div>
+        <div  class="margin-top-large is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-left">
+
+
+            <% for(each of theUser.movie){ %> 
+                <div class="column is-2 box m-4" >
+
+
+
+
+
+                        <h5 class=" is-size-4 title"><%= each.title %> </h5>
+
+
+                        <p><%= each.date || 'Unkown'%> </p>
+
+                        
+
+                        <form action="/movie/<%= theUser._id %>/movieInfo/<%= each._id %>" >
+                            <button class="button is-info is-outlined is-small is-rounded mt-3">
+                                <span>Add Review</span>
+                                <span class="icon is-small">
+                                    <i class="far fa-comment"></i>
+                                </span>
+                            </button>
+                        </form>
+
+
+
+                        <form action="/movie/<%= theUser._id %>/movieInfo/<%= each._id %>?_method=delete" method="POST">
+                            <button class="button is-danger is-outlined is-small is-rounded mt-3">
+                                <span>Delete</span>
+                                <span class="icon is-small">
+                                <i class="fas fa-times"></i>
+                                </span>
+                            </button>
+                        </form>
+
+
+
+                        <% try{ %> 
+                        <div class="image mt-5" >
+                            <a href="/movie/<%= theUser._id %>/movieInfo/<%= each._id %>">
+
+                                <%let imgSrc=each.image %> 
+                                <img width="256px" 
+                                src="<%= imgSrc ||"https://complianz.io/wp-content/uploads/2019/03/placeholder-300x202.jpg" %>" 
+                                >
+
+                            </a>
+
+                        </div>
+                        <% }catch(e){} %>  
+
+
+                        
+                </div>
+
+            <% } %> 
+
+        </div>
+</div>
 
 
     

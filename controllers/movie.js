@@ -66,7 +66,7 @@ module.exports.userMovie=async (req,res,next)=>{
 
     const {id} = req.params
     const theUser = await User.findById(id).populate('movie')
-    res.render('userMovie',{theUser})
+    res.render('usermovie',{theUser})
 }
 
 
