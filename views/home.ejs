@@ -1,0 +1,44 @@
+<% layout('/layouts/boilerplate') %> 
+
+<h1>This is Home.Welcome</h1>
+
+
+
+<div  class="is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-left">
+    <% for(each of movies){ %> 
+    
+    <div class="column is-2 box m-4" >
+
+        <h5 class=" is-size-4 title"><%= each.title %> </h5>
+
+        <p><%= each.date || 'Unkown'%> </p>
+
+        <p>Shared by: <%= each.user.username%></p>
+
+        <% try{ %> 
+        <div class="image mt-5">
+            <%let imgSrc=each.image %> 
+
+            <% if(user){ %> 
+            <a href="/movie/<%= user.id%>/movieInfo/<%= each._id %>  ">
+                <img width="256px" 
+                src="<%= imgSrc ||"https://complianz.io/wp-content/uploads/2019/03/placeholder-300x202.jpg" %>" 
+                >
+            </a>
+
+            <% }else{ %> 
+
+                <a href="/movie/public/movieInfo/<%= each._id %>  ">
+                    <img width="256px" 
+                    src="<%= imgSrc ||"https://complianz.io/wp-content/uploads/2019/03/placeholder-300x202.jpg" %>" 
+                    >
+                </a>
+
+            <% } %> 
+        </div>
+        <% }catch(e){} %>  
+
+    </div>
+
+    <% } %> 
+</div>

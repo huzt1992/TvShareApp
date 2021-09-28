@@ -1,0 +1,122 @@
+<% layout('layouts/boilerplate.ejs') %>
+
+<div class="columns">
+
+
+
+
+    <div class="column is-4 box m-4" >
+
+        <h5 class=" is-size-3 title"><%= movie.title %> </h5>
+
+        <p><%= movie.date || 'Unkown'%> </p>
+
+
+        <% try{ %> 
+        <div class="image mt-5" >
+                <%let imgSrc=movie.image %> 
+                <img width="256px" 
+                src="<%= imgSrc ||"https://complianz.io/wp-content/uploads/2019/03/placeholder-300x202.jpg" %>" 
+                >
+
+            </a>
+        </div>
+        <% }catch(e){} %>  
+
+        
+    </div>
+
+
+
+    <div class=" column is-8">
+
+
+        
+        <!-- Submit the Review -->
+        <% if(id!=='public') {%> 
+        <div>
+            <form action="/movie/<%= id%>/movieInfo/<%= movie._id %> " method="POST">
+
+
+                <fieldset class="starability-checkmark">
+                    <legend>Rating:</legend>
+                    <input type="radio" id="no-rate" class="input-no-rate" name="rating" value="0" checked aria-label="No rating." />
+                    <input type="radio" id="first-rate1" name="rating" value="1" />
+                    <label for="first-rate1" title="Terrible">1 star</label>
+                    <input type="radio" id="first-rate2" name="rating" value="2" />
+                    <label for="first-rate2" title="Not good">2 stars</label>
+                    <input type="radio" id="first-rate3" name="rating" value="3" />
+                    <label for="first-rate3" title="Average">3 stars</label>
+                    <input type="radio" id="first-rate4" name="rating" value="4" />
+                    <label for="first-rate4" title="Very good">4 stars</label>
+                    <input type="radio" id="first-rate5" name="rating" value="5" />
+                    <label for="first-rate5" title="Amazing">5 stars</label>
+                  </fieldset>
+
+              
+
+
+                <!-- <div>
+                    <label for="rating">Rating</label>
+                    <input type="number" name="rating" id="rating">
+                </div> -->
+    
+                <div>
+                    <label for="body"></label>
+                    <textarea name="body" id="body" 
+                    id="body" cols="30" rows="10"></textarea>
+                </div>
+    
+                <button>
+                    submit
+
+                </button>
+            </form>
+
+        </div>
+
+        <% } %> 
+
+
+        <!-- Show the Review -->
+        <div >
+            <% try{ %> 
+                <% const reviews = movie.review %> 
+
+
+                <% for(review of reviews){%> 
+
+                    <div class="card mt-5">
+
+
+                        <p class="starability-result" data-rating="<%= review.rating %>">
+                            Rated: <%= review.rating %> stars
+                          </p>
+                        <h3><%= review.body %> </h3>
+                        <p>Posted by <%= review.user.username %> </p>
+
+                        <% if(review.user._id == id){ %> 
+                        <form action="/movie/<%= id%>/movieInfo/<%= movie._id %>/review/<%= review._id%>?_method=delete  " method="POST">
+                            <button class="button is-danger is-outlined is-small is-rounded mt-3">
+                                <span>Delete</span>
+                                <span class="icon is-small">
+                                <i class="fas fa-times"></i>
+                                </span>
+                            </button>
+                        </form>
+                        
+
+                    <% } %> 
+                    </div>
+                <% } %> 
+            <% }catch(e){} %>               
+        </div>
+
+
+    </div>
+
+
+
+
+
+</div>
