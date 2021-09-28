@@ -1,19 +1,27 @@
 <% layout('/layouts/boilerplate') %> 
 
-<h1>This is Home.Welcome</h1>
+
+<div class="margin-top-large center-text">
+    <h1 class="large-title has-text-weight-semibold">Share your next</h1>
+    <h1 class="large-title has-text-weight-bold" id="color-change-title">MOVIE</h1>
+</div>
 
 
 
-<div  class="is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-left">
+
+<div  class="margin-top-large is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-left ">
     <% for(each of movies){ %> 
     
-    <div class="column is-2 box m-4" >
+    <div class="movieCard column is-2 box m-4" >
 
         <h5 class=" is-size-4 title"><%= each.title %> </h5>
 
-        <p><%= each.date || 'Unkown'%> </p>
+        <div class="is-size-6 is-italic has-text-grey mb-3">
+            <p >Release Date:%> </p>
+            <p ><%= each.date || 'Unkown'%> </p>
+        </div>
 
-        <p>Shared by: <%= each.user.username%></p>
+        <p class="has-text-grey-light">Shared by: <span class="has-text-link has-text-weight-semibold"><%= each.user.username%></span></p>
 
         <% try{ %> 
         <div class="image mt-5">
@@ -28,7 +36,7 @@
 
             <% }else{ %> 
 
-                <a href="/movie/public/movieInfo/<%= each._id %>  ">
+                <a href="/user/login/request ">
                     <img width="256px" 
                     src="<%= imgSrc ||"https://complianz.io/wp-content/uploads/2019/03/placeholder-300x202.jpg" %>" 
                     >
@@ -42,3 +50,32 @@
 
     <% } %> 
 </div>
+
+<script>
+
+randomColor=()=>{
+    const r = Math.floor(Math.random()*256)
+    const g = Math.floor(Math.random()*256)
+    const b = Math.floor(Math.random()*256)
+    return `rgb(${r},${g},${b})`
+}
+
+
+const subtitle = document.querySelector('#color-change-title') 
+
+
+
+var myFunc01 = function() {
+    var i = 0;
+    while (i < 100) {
+      (function(i) {
+        setTimeout(function() {
+            subtitle.style.color=randomColor()    
+        }, 3000 * i)
+      })(i++)
+    }
+  };
+  
+  myFunc01();
+
+</script>

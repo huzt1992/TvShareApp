@@ -52,7 +52,7 @@ module.exports.loginPost = async (req,res)=>{
     const user = await User.findOne({username})
     const {id} = user
     // return to previous attempting page(returnTo defined in isLogIn middleware)
-    const url = req.session.returnTo || `/movie`  
+    const url = req.session.returnTo || `/`  
 
     req.session.searchName= null  
     res.redirect(`${url}`)
@@ -74,4 +74,11 @@ module.exports.userDelete = async(req,res,next)=>{
     await User.findByIdAndDelete(id)
     req.flash('success','successfuly deleted!')
     res.redirect('/')
+}
+
+
+
+module.exports.loginFlash =(req,res,next)=>{
+    req.flash('success','Please log in or sign in first')
+    res.redirect('/user/login')
 }

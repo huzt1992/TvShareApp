@@ -1,18 +1,30 @@
 
 <% layout('/layouts/boilerplate') %> 
-<h1>This is your movie page</h1>
 
-
-<div>
+<div class="margin-top-large">
     <form action="/movie/search" method="POST">
-        <label for="name">Please put the key word for movie you wish to search</label>
-        <input type="text" name="name">
-        <button>search!</button>
+            <div class="control">
+                <input class="input is-hovered is-rounded is-link is-large" type="text" placeholder="Movie Key Word Search" name="name">
+            </div>
+            <div class="column center-text ">
+                <button class=" button is-large is-rounded is-link">
+                    
+                    <span class="icon">
+                        <i class="fas fa-search"></i>
+                      </span>
+                      <span>
+                        SEARCH
+                      </span>
+                    </button>  
+
+            </div>
+   
     </form>
 
-    
-</div>
-    <div  class="is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-left">
+</div >
+
+
+    <div  class="margin-top-large is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-left">
 
         <% for(each of search){ %> 
 
@@ -34,20 +46,28 @@
 
                     <% try{ %> 
                     <figure class="image mt-5" >
+
+                        <% if(user){ %> 
+                            <a href="/movie/<%= user.id%>/movieInfo/<%= each._id %>  ">
+                        <% }else{ %> 
+                            <a href="/user/login/request ">
+                        <% } %> 
+
                             <%let imgSrc=each.show.image.original %> 
 
                             <img  width="256px" src="<%= imgSrc%> " id="img<%= each.show.id %>">
-
+                        </a>
                     </figure>
                     <% }catch(e){} %>   
       
+
             </div>
 
 
         <% } %> 
 
     </div>
-    <script src="/jquery.js"></script>  
+    <script src="/javascript/jquery.js"></script>  
     <script>
 
 

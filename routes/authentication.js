@@ -20,6 +20,15 @@ Router.route('/login')
 Router.get('/logout',logout)
 
 
+const loginFlash =(req,res,next)=>{
+    req.flash('success','Please log in or sign in first')
+    res.redirect('/user/login')
+}
+
+
+Router.get('/login/request',loginFlash)
+
+
 Router.delete('/:id',userDelete)
 
 

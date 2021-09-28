@@ -1,13 +1,17 @@
 
 <% layout('/layouts/boilerplate') %> 
-<h1 class="title"><%= theUser.username %>'s Movie Collection </h1>
 
-<form action="/movie">
-    <button class="button">Back to Moive Search</button>
-</form>
+<div class="mt-5">
+    <h1 class="title"><%= theUser.username %>'s Movie Collection </h1>
+
+    <form action="/movie">
+        <button class="button is-rounded">Back to Moive Search</button>
+    </form>
+    
+</div>
 
 </div>
-    <div  class="is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-left">
+    <div  class="margin-top-large is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-left">
 
 
         <% for(each of theUser.movie){ %> 
@@ -23,6 +27,18 @@
                     <p><%= each.date || 'Unkown'%> </p>
 
                     
+
+                    <form action="/movie/<%= theUser._id %>/movieInfo/<%= each._id %>" >
+                        <button class="button is-info is-outlined is-small is-rounded mt-3">
+                            <span>Add Review</span>
+                            <span class="icon is-small">
+                                <i class="far fa-comment"></i>
+                            </span>
+                          </button>
+                    </form>
+
+
+
                     <form action="/movie/<%= theUser._id %>/movieInfo/<%= each._id %>?_method=delete" method="POST">
                         <button class="button is-danger is-outlined is-small is-rounded mt-3">
                             <span>Delete</span>
@@ -31,6 +47,8 @@
                             </span>
                           </button>
                     </form>
+
+
 
                     <% try{ %> 
                     <div class="image mt-5" >

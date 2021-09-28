@@ -1,0 +1,32 @@
+
+.movieCard{ 
+    border: solid 1px white;
+    transition: box-shadow 400ms ease-in-out;
+}
+
+.movieCard:hover{
+    box-shadow: 5px 5px rgba(26, 25, 87,0.5);
+
+}
+
+
+.center-text{
+    text-align: center;
+    margin:auto
+}
+
+.large-title{
+    font-size: 85px;
+}
+
+
+
+#color-change-title{
+    transition: color 500ms ease-in-out;
+}
+
+
+
+.margin-top-large{
+    margin-top: 150px;
+}
