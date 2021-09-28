@@ -30,3 +30,11 @@
 .margin-top-large{
     margin-top: 150px;
 }
+
+
+.reviewBox{
+    margin-top: 15px;
+    padding:10px;
+    border-radius: 10px;
+    border:solid 1px darkgray
+}

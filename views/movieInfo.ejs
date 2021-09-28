@@ -86,14 +86,21 @@
 
                 <% for(review of reviews){%> 
 
-                    <div class="card mt-5">
+                    <div class="card mt-5 p-3">
 
 
-                        <p class="starability-result" data-rating="<%= review.rating %>">
-                            Rated: <%= review.rating %> stars
-                          </p>
-                        <h3><%= review.body %> </h3>
-                        <p>Posted by <%= review.user.username %> </p>
+
+                            <p class="starability-result" data-rating="<%= review.rating %>">
+                                Rated: <%= review.rating %> stars
+                              </p>
+
+
+                        <div class="reviewBox">
+                            
+                            <h3 class="is-size-5"><%= review.body %> </h3>
+                            <p class="is-size-6 has-text-grey-light mt-4">Posted by <span class="has-text-grey-dark"><%= review.user.username %></span> </p>
+
+                        </div>
 
                         <% if(review.user._id == id){ %> 
                         <form action="/movie/<%= id%>/movieInfo/<%= movie._id %>/review/<%= review._id%>?_method=delete  " method="POST">
