@@ -3,7 +3,9 @@ const passport = require('passport')
 const User = require('../models/user')
 const Router = express.Router()
 const {catchAsync}= require('../utils/catchAsync')
-const {registerShow,registerPost,loginShow,loginPost,logout,userDelete}=require('../controllers/authentication.js')
+const {registerShow,registerPost,loginShow,loginPost,logout,userDelete,
+loginFlash
+}=require('../controllers/authentication.js')
 
 
 
@@ -19,11 +21,6 @@ Router.route('/login')
 
 Router.get('/logout',logout)
 
-
-const loginFlash =(req,res,next)=>{
-    req.flash('success','Please log in or sign in first')
-    res.redirect('/user/login')
-}
 
 
 Router.get('/login/request',loginFlash)
