@@ -1,13 +1,13 @@
 
 <% layout('/layouts/boilerplate') %> 
 
-<div class="margin-top-large">
+<div class="margin-top-large container is-fluid">
     <form action="/movie/search" method="POST">
             <div class="control">
                 <input class="input is-hovered is-rounded is-link is-large" type="text" placeholder="Movie Key Word Search" name="name">
             </div>
             <div class="column center-text ">
-                <button class=" button is-large is-rounded is-link">
+                <button class=" button is-normal is-rounded is-link">
                     
                     <span class="icon">
                         <i class="fas fa-search"></i>
@@ -28,7 +28,7 @@
 
         <% for(each of search){ %> 
 
-            <div class="column is-2-widescreen is-3-desktop is-4-tablet is-12-mobile box m-4" >
+            <div class="column is-2-widescreen is-3-desktop is-4-tablet is-10-mobile box m-4" >
 
                     <h5 class="title is-size-4" id="title<%= each.show.id %>"><%= each.show.name %> </h5>
                     <p id="date<%= each.show.id %>"><%= each.show.premiered || 'Unkown' %> </p>

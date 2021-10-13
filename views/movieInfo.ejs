@@ -1,11 +1,9 @@
 <% layout('layouts/boilerplate.ejs') %>
 
-<div class="columns">
+<div class="columns container is-fluid margin-top-large ">
 
 
-
-
-    <div class="column is-4 box m-4" >
+    <div class="column is-4 is-10-mobile box mt-4" >
 
         <h5 class=" is-size-3 title"><%= movie.title %> </h5>
 
@@ -97,7 +95,7 @@
 
                         <div class="reviewBox">
                             
-                            <h3 class="is-size-5"><%= review.body %> </h3>
+                            <h3 class="is-size-5 is-size-6-mobile"><%= review.body %> </h3>
                             <p class="is-size-6 has-text-grey-light mt-4">Posted by <span class="has-text-grey-dark"><%= review.user.username %></span> </p>
 
                         </div>

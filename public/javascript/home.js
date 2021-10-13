@@ -9,6 +9,7 @@ const innerWidth = window.innerWidth;
 
 const texts = document.querySelector('.parallexMove .text')
 const remoteController = document.querySelector('.parallexMove .remote-controller')
+const remoteControllerImg1 = document.querySelector('.parallexMove .remote-controller .img')
 const remoteControllerImg2 = document.querySelector('.parallexMove .remote-controller .img-2')
 
 window.addEventListener('DOMContentLoaded',function(){
@@ -22,12 +23,16 @@ window.addEventListener('DOMContentLoaded',function(){
 window.addEventListener('scroll',function(){
     let yValue = window.scrollY
     console.log(yValue)
-    const remoteRotate = 35+(yValue-450)*0.1
-    if(remoteRotate<55){
+    const remoteRotate = 125+yValue*0.1
+    if(remoteRotate<180){
+
+
+        remoteControllerImg1.style.transform=`skew(0deg,${(yValue)*0.1}deg)`
+        remoteControllerImg1.style.transform=`rotate(${remoteRotate}deg)`
 
         remoteControllerImg2.style.opacity=(yValue-450)/55
-        remoteController.style.transform=`skew(0deg,${(yValue-450)*0.1}deg)`
-        remoteController.style.transform=`rotate(${remoteRotate}deg)`
+        remoteControllerImg2.style.transform=`skew(0deg,${(yValue)*0.1}deg)`
+        remoteControllerImg2.style.transform=`rotate(${remoteRotate}deg)`
     }
 
 

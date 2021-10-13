@@ -1,48 +1,53 @@
 
 
 <% layout('/layouts/boilerplate') %> 
-<h1>SIGN UP</h1>
+<div class="container is-fluid">
+
+    <h1>SIGN UP</h1>
 
 
-<form action="/user/register" method="POST">
+    <form action="/user/register" method="POST">
+
+
+        <div class="field">
+            <label class="label" for="username">username</label>
+            <input class="input" type="text" name="username" id="username">
+        </div>
 
 
     <div class="field">
-        <label class="label" for="username">username</label>
-        <input class="input" type="text" name="username" id="username">
+        
+        <label class="label" for="email">email</label>
+        <p class="control has-icons-left has-icons-right">
+            <input class="input" type="email" name="email" id="email">
+
+            <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+            </span>
+
+            <span class="icon is-small is-right">
+                <i class="fas fa-check"></i>
+            </span>
+        </p>
     </div>
 
 
-<div class="field">
-    
-    <label class="label" for="email">email</label>
-    <p class="control has-icons-left has-icons-right">
-        <input class="input" type="email" name="email" id="email">
-
+    <div class="field">
+        <label class="label" for="password">password</label>
+        <p class="control has-icons-left">
+        <input class="input"type="password" name="password" id="password">
         <span class="icon is-small is-left">
-            <i class="fas fa-envelope"></i>
+            <i class="fas fa-lock"></i>
         </span>
+        </p>
 
-        <span class="icon is-small is-right">
-            <i class="fas fa-check"></i>
-        </span>
-    </p>
+    </div>
+    <div>
+        <button class="button is-fullwidth is-rounded is-primary mt-5 is-outlined">SIGN UP</button>
+    </div>
+
+
+    </form>
+
+    
 </div>
-
-
-<div class="field">
-    <label class="label" for="password">password</label>
-    <p class="control has-icons-left">
-    <input class="input"type="password" name="password" id="password">
-    <span class="icon is-small is-left">
-        <i class="fas fa-lock"></i>
-    </span>
-    </p>
-
-</div>
-<div>
-    <button class="button is-fullwidth is-rounded is-primary mt-5 is-outlined">SIGN UP</button>
-</div>
-
-
-</form>
