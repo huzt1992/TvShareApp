@@ -115,6 +115,10 @@
         color:hsl(0, 0%, 56%);
     }
 
+    .collection .movieCard{
+        z-index: 30;
+    }
+
 
 }
 

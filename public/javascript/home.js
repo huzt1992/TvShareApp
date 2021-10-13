@@ -225,16 +225,17 @@ window.addEventListener('scroll',function(){
         }
 
         // part 4
-
+        
         if(yValue>scrollYPart4){
             parallexScroll.style.backgroundColor="white"   
             part4Circle2.style.width ="25px";
             part4Circle2.style.height ="25px";
 
-            if((yValue-scrollYPart4)<300){
-                part4h1.style.marginTop=300-(yValue-scrollYPart4)+"px"
-                part4h1.style.opacity=(yValue-scrollYPart4)/300
+            if((yValue-scrollYPart4)<2000){
+                part4h1.style.marginTop=300+(yValue-scrollYPart4)*0.8+"px"
+                part4h1.style.opacity=(yValue-scrollYPart4)/1500
             }
+
 
 
         }else{
@@ -332,9 +333,9 @@ window.addEventListener('scroll',function(){
             part4Circle2.style.width ="25px";
             part4Circle2.style.height ="25px";
 
-            if((yValue-scrollYPart4)<300){
-                part4h1.style.marginTop=300-(yValue-scrollYPart4)+"px"
-                part4h1.style.opacity=(yValue-scrollYPart4)/300
+            if((yValue-scrollYPart4)<2000){
+                part4h1.style.marginTop=300+(yValue-scrollYPart4)*0.8+"px"
+                part4h1.style.opacity=(yValue-scrollYPart4)/1500
             }
 
 
