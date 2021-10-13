@@ -1,0 +1,115 @@
+
+@media only screen and (max-width: 768px) {
+
+    p{
+        font-size: 16px;
+    }
+
+    .whiteMiddleLine{
+        display: none;
+    }
+
+    .parallexMove{
+        padding: 10px;
+    }
+
+
+    .frame-right{
+        margin:auto;
+        margin-top: 50px;
+        width: 80%;
+    }
+    .frame-left{
+        margin-top: 50px;
+        width: 80%;
+    }
+
+    .text-wrap{
+        width: 100%;
+    }
+
+
+
+    .image-left-wrap{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    
+    .image-left-wrap .image-left{
+        margin-top: 200px;
+        width: 50%;
+        height: 400px;
+    }
+    
+    .left-at-back{
+        margin-top: -400px;
+        margin-left: 0px;
+    }
+
+    .left-at-back .image-left-back{
+        width: 50%;
+        height: 400px;
+        z-index:3;
+    }
+
+    .image-right-wrap{
+        margin-top: 200px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-left: 0px;
+    }
+    
+    
+    .image-right-wrap .image-right{
+        position: relative;
+        width: 50%;
+        height: 400px;
+        z-index:5;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+    }
+    
+    .right-at-back{
+        margin-top: -400px;
+        margin-left: 0px;
+    }
+    
+    .image-right-wrap .image-right-back{
+        position: relative;
+        margin: auto;
+        width: 50%;
+        height: 400px;
+        z-index:3;
+    }
+
+    .collection{
+        padding: 10%;
+    }
+
+    .tvName{
+        opacity: 1;
+        margin-left: 0px;
+        margin: auto;
+        margin-top: -600px;
+        text-align: center;
+        padding: 5%;
+        font-size: 55px;
+        color:hsl(0, 0%, 56%);
+    }
+
+    .part2 .tvName{
+        opacity: 1;
+        margin-left: 0px;
+        margin: auto;
+        margin-top: -600px;
+        text-align: center;
+        padding: 5%;
+        font-size: 55px;
+        color:hsl(0, 0%, 56%);
+    }
+}
+
+
+

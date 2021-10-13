@@ -1,81 +1,200 @@
 <% layout('/layouts/boilerplate') %> 
 
+<link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/home_mobile.css">
 
-<div class="margin-top-large center-text">
-    <h1 class="large-title has-text-weight-semibold">Share your next</h1>
-    <h1 class="large-title has-text-weight-bold" id="color-change-title">TV SHOW</h1>
-</div>
-
+<div class="main">
 
 
-
-<div  class="margin-top-large is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-left ">
-    <% for(each of movies){ %> 
+<!-- 
+    <div class="margin-top-large center-text">
+        <h1 class="large-title has-text-weight-semibold">Share your next</h1>
+        <h1 class="large-title has-text-weight-bold" id="color-change-title">TV SHOW</h1>
+    </div>
     
-    <div class="movieCard column is-2-widescreen is-3-desktop is-4-tablet is-12-mobile box m-4" >
+     -->
+   
+     <div class="whiteMiddleLine" id="whiteMiddleLine"></div>
+     <div class="whiteMiddle-background whiteMiddleLine"></div>
 
-        <h5 class=" is-size-4 title"><%= each.title %> </h5>
-
-        <div class="is-size-6 is-italic has-text-grey mb-3">
-            <p >Release Date:%> </p>
-            <p ><%= each.date || 'Unkown'%> </p>
+    <section class="parallexMove">
+        <div class="text-wrap">
+            <div class="text">
+                <p class="is-size-5 is-size-7-mobile">An app for tv shows share</p>
+                <h2 class="title is-size-1 is-size-2-mobile mt-4"><strong>E</strong>xplore, <strong>S</strong>hare and <strong>R</strong>ate</h2>
+                <h2 class="title is-size-2 is-size-3-mobile"> on latest TV shows</h2>
+            </div>
         </div>
 
-        <p class="has-text-grey-light">Shared by: <span class="has-text-link has-text-weight-semibold"><%= each.user.username%></span></p>
+        <div class="remote-controller">
+            <div>
+                <div class="img img-1">
+                </div>
+            </div>
 
-        <% try{ %> 
-        <div class="image mt-5">
-            <%let imgSrc=each.image %> 
+            <div class="img img-2"></div>            
+        </div>
+    </section>
 
-            <% if(user){ %> 
-            <a href="/movie/<%= user.id%>/movieInfo/<%= each._id %>  ">
-                <img width="256px" 
-                src="<%= imgSrc ||"https://complianz.io/wp-content/uploads/2019/03/placeholder-300x202.jpg" %>" 
-                >
-            </a>
 
-            <% }else{ %> 
+    <section class="parallexScroll">
+        
 
-                <a href="/user/login/request ">
-                    <img width="256px" 
-                    src="<%= imgSrc ||"https://complianz.io/wp-content/uploads/2019/03/placeholder-300x202.jpg" %>" 
-                    >
-                </a>
 
+        <div class="blank"></div>
+
+        <div class="part1 part-height">
+            <div class="circle1"></div>
+            <div class="circle2-container">
+                <div class="circle2"></div>
+            </div>
+
+            <div class="frame-right">
+                <div class="text-wrap">
+                    <h2 >TheLittleSongbird</h2>
+                    <h2>This is a television show?</h2>
+                    <p>In the fictional Seven Kingdoms of Westeros, the ruler sits on the Iron Throne. It's a story of various characters fighting to gain the throne, influence the throne, or survive the throne. There are White Walkers, giants, dragons, and a big ice wall..</p>
+                </div>
+            </div>  
+            
+            <div class="image-left-wrap">
+                 <div class="image-left image-url"></div>
+            </div>
+
+            <div class="image-left-wrap left-at-back">
+                <div class="image-left-back image-url-back"></div>
+            </div>
+
+            <div class="tvName">
+                <h1 class="has-text-weight-light">GAME OF THRONE</h1>
+            </div>
+        </div>
+
+
+        <div class="part2 part-height">
+            <div class="circle1"></div>
+            <div class="circle2-container">
+                <div class="circle2"></div>
+            </div>
+
+            <div class="frame-left">
+                    <div class="text-wrap">
+                        <h2 >nightringer-76840d</h2>
+                        <h2>Brilliant</h2>
+                        <p>This is scifi in it's best form. No violence, no sex, no nudity, dense story. I rate this based on first episode only, but I can't wait to dive in to next episodes. I haven't read Asimov's works, but either way, I like what I see. We'll see if my rating drops as the next episodes unfold.</p>
+                    </div>
+            </div>  
+            
+            <div class="image-right-wrap">
+                <div class="image-right image-url"></div>
+            </div>
+
+
+            <div class="image-right-wrap right-at-back">
+                <div class="image-right-back image-url-back"></div>
+            </div>
+
+            <div class="tvName">
+                <h1 class="has-text-weight-light">FOUNDATION</h1>
+            </div>
+        </div>
+
+
+
+
+        <div class="part3 part-height">
+            <div class="circle1"></div>
+            <div class="circle2-container">
+                <div class="circle2"></div>
+            </div>
+
+            <div class="frame-right">
+                <div class="text-wrap">
+                    <h2 >beresfordjd</h2>
+                    <h2>Nailed it!!</h2>
+                    <p>To my surprise they absolutely nailed it. Cumberbatch is a fantastic choice for Sherlock Holmes-he is physically right (he fits the traditional reading of the character) and he is a damn good actor. Martin Freeman, about whom I wasn't sure at first, is an excellent foil for Holmes without being the dumb sidekick that Dr Watson has often been. I thought that this series would not work, particularly after Robert Downey's interesting take on Conan Doyle's characterisation.</p>
+                </div>
+            </div>  
+            
+            <div class="image-left-wrap">
+                 <div class="image-left image-url"></div>
+            </div>
+
+            <div class="image-left-wrap left-at-back">
+                <div class="image-left-back image-url-back"></div>
+            </div>
+
+
+            
+            <div class="tvName">
+                <h1 class="has-text-weight-light">SHERLOCK</h1>
+            </div>
+        </div>
+
+
+
+        <div class="part4">
+            <div class="circle1"></div>
+            <div class="circle2-container">
+                <div class="circle2"></div>
+            </div>
+
+            <h1 class="is-size-1 is-size-2-mobile">Welcome to our Show Collection</h1>
+
+        </div>
+ 
+
+
+    </section>
+
+
+    <section class="collection">
+        <div  class="movie-list container margin-top-large is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-left">
+            <% for(each of movies){ %> 
+            
+            <div class="movieCard column is-2-widescreen is-3-desktop is-4-tablet is-12-mobile box m-4" >
+        
+                <h5 class=" is-size-4 title"><%= each.title %> </h5>
+        
+                <div class="is-size-6 is-italic has-text-grey mb-3">
+                    <p >Release Date:%> </p>
+                    <p ><%= each.date || 'Unkown'%> </p>
+                </div>
+        
+                <p class="has-text-grey-light">Shared by: <span class="has-text-link has-text-weight-semibold"><%= each.user.username%></span></p>
+        
+                <% try{ %> 
+                <div class="image mt-5">
+                    <%let imgSrc=each.image %> 
+        
+                    <% if(user){ %> 
+                    <a href="/movie/<%= user.id%>/movieInfo/<%= each._id %>  ">
+                        <img width="256px" 
+                        src="<%= imgSrc ||"https://complianz.io/wp-content/uploads/2019/03/placeholder-300x202.jpg" %>" 
+                        >
+                    </a>
+        
+                    <% }else{ %> 
+        
+                        <a href="/user/login/request ">
+                            <img width="256px" 
+                            src="<%= imgSrc ||"https://complianz.io/wp-content/uploads/2019/03/placeholder-300x202.jpg" %>" 
+                            >
+                        </a>
+        
+                    <% } %> 
+                </div>
+                <% }catch(e){} %>  
+        
+            </div>
+        
             <% } %> 
         </div>
-        <% }catch(e){} %>  
+    </section>
 
-    </div>
-
-    <% } %> 
+    
 </div>
 
-<script>
 
-randomColor=()=>{
-    const r = Math.floor(Math.random()*256)
-    const g = Math.floor(Math.random()*256)
-    const b = Math.floor(Math.random()*256)
-    return `rgb(${r},${g},${b})`
-}
+<script src="/javascript/home.js"></script>
 
-
-const subtitle = document.querySelector('#color-change-title') 
-
-
-
-var myFunc01 = function() {
-    var i = 0;
-    while (i < 100) {
-      (function(i) {
-        setTimeout(function() {
-            subtitle.style.color=randomColor()    
-        }, 2000 * i)
-      })(i++)
-    }
-  };
-  
-  myFunc01();
-
-</script>

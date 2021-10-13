@@ -1,0 +1,396 @@
+*{
+    box-sizing: border-box;
+}
+
+.movieCard{ 
+    border: solid 1px white;
+    transition: box-shadow 400ms ease-in-out;
+}
+
+.movieCard:hover{
+    box-shadow: 5px 5px rgba(26, 25, 87,0.5);
+
+}
+
+
+.center-text{
+    text-align: center;
+    margin:auto
+}
+
+.large-title{
+    font-size: 85px;
+}
+
+
+
+#color-change-title{
+    transition: color 1500ms ease-in-out;
+}
+
+
+
+.margin-top-large{
+    margin-top: 150px;
+}
+
+
+.reviewBox{
+    margin-top: 15px;
+    padding:10px;
+    border-radius: 10px;
+    border:solid 1px darkgray
+}
+
+
+.main{
+    height: 100%;
+}
+
+
+
+ .whiteMiddleLine{
+    position: fixed;
+    top: 0px;
+    width: 50%;
+    height: 50%;
+    border-right: dotted 2px white;
+}
+
+
+.whiteMiddle-background{
+    height: 100%;
+    border-right: dotted 2px rgba(255, 255, 255, 0.2);
+}
+
+
+
+
+.parallexMove{
+    height:800px;
+    padding: 100px;
+    padding-top: 50px;
+}
+
+
+.parallexMove .text-wrap{
+    height: 600px;
+}
+
+.parallexMove .text{
+    opacity: 0;
+    position: relative;
+    padding-top: 50px;
+    text-align: center;
+    margin: auto;
+    z-index: 20;  
+    transition: all 1.5s ease-in-out;
+}
+
+
+
+.parallexMove p{
+    color: black;
+    display: inline-block;    
+    border-bottom: solid 0.5px black;
+}
+
+.parallexMove .remote-controller {
+    opacity: 0;
+    margin-top: -40px;
+    transition: opacity 1.5s ease-in-out,margin-top 1.5s ease-in-out;
+}
+
+
+.parallexMove .remote-controller .img{
+    position: relative;
+    width: 100px;
+    height: 300px;
+    margin: auto;
+    transform: rotate(125deg);
+    z-index: 30;
+}
+
+
+.parallexMove .remote-controller .img-1{
+    background-image: url('/images/wiimote.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.parallexMove .remote-controller  .img-2{
+    opacity: 0;
+    position: relative;
+    margin-top: -300px;
+    background-image: url('/images/wiimote2.png');
+    background-size: cover;
+    background-position: center;
+    z-index: 31;
+}
+
+
+
+
+
+
+.parallexScroll{
+
+    width: 100%;
+    height: 4700px;
+    background-color: rgb(144, 145, 151);
+    transition: all 500ms ease-in-out;
+}
+
+.parallexScroll .blank{
+    height: 500px;
+}
+
+
+
+
+.circle1{
+    width: 40px;
+    height: 40px;
+
+    margin: auto;
+    border-radius: 50%;
+    border:solid white;
+    border-width: 1px;
+
+}
+
+
+.circle2-container{
+    margin: auto;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+
+}
+
+
+.circle2{
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+    border:solid white;
+    background-color: white;
+    border-width: 1px;
+    z-index: 10;
+    transition: all 300ms ease-in-out ;
+}
+
+
+
+
+.frame-right{
+    margin-top: -20px;
+    margin-left: 50%;
+    width: 40%;
+    border:solid 1px rgba(255, 255, 255, 0.2);
+    box-sizing: border-box;
+    z-index: 5;
+    transition: all 500ms ease-in-out ;
+
+}
+
+
+
+.frame-left{
+    margin-top: -20px;
+    width: 40%;
+    box-sizing: border-box;
+    z-index: 5;
+    display: flex;
+    justify-content: right;
+    transition: all 500ms ease-in-out ;
+
+    border:solid 1px rgba(255, 255, 255, 0.2);
+    margin-left: 10%;
+
+}
+
+
+
+
+.text-wrap{
+    padding: 40px;
+    width:60%;
+    margin: auto;
+    height: 100%;
+    color: white;
+}
+
+.text-wrap h2:nth-child(1){
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.5);
+    padding-bottom: 10px;
+}
+
+.text-wrap h2:nth-child(2){
+    font-size: 18px;
+}
+
+
+.text-wrap p{
+    opacity: 0.8;
+    font-size: 12px;
+}
+
+
+
+.image-left-wrap{
+    width: 50%;
+    display: flex;
+    justify-content: right;
+}
+
+
+.image-left-wrap .image-left{
+    margin-top: -100px;
+    width: 70%;
+    height: 600px;
+    z-index: 5;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+.left-at-back{
+    margin-top: -600px;
+    margin-left: 100px;
+}
+
+
+.image-left-wrap .image-left-back{
+    width: 70%;
+    height: 500px;
+    z-index:3;
+}
+
+
+
+
+
+.image-right-wrap{
+    margin-top: -100px;
+    margin-left: 50%;
+}
+
+
+.image-right-wrap .image-right{
+    position: relative;
+    width: 70%;
+    height: 600px;
+    z-index:5;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+
+.image-right-wrap .image-right-back{
+    position: relative;
+    margin-top: -400px;
+    margin-left: -100px;
+    width: 70%;
+    height: 500px;
+    z-index:3;
+}
+
+
+.tvName{
+    margin-top: -700px;
+    margin-left:-5%;
+    font-size: 75px;
+    color:hsl(0, 0%, 56%);
+}
+
+
+
+
+
+.part-height{
+    height: 1300px;
+}
+
+
+.part1 .image-url{
+    background: url("/images/69aa753a58c64816c68329bb5cbf1c74.jpg");    
+    background-size: cover;
+    background-position: center;
+        /* override */
+        height: 600px;
+}
+
+.part1 .image-url-back{
+    background: url("/images/winterfell-game-of-thrones-1556823693.jpg");    
+    background-size: cover;
+    background-position: center;
+            /* override */
+            height: 500px;
+}
+
+
+
+
+
+.part2 .image-url{
+    background: url("/images/EEXD5DOQ6NEM3IHTDDLOQOHRSA.jpg");    
+    background-size: cover;
+    background-position: center;
+    /* override */
+    height: 400px;
+}
+
+.part2 .image-url-back{
+    background: url("/images/wqyCSX9m54SXULp96xf8fpZat0b.jpg");    
+    background-size: cover;
+    background-position: center;
+    /* override */
+    height: 600px;
+}
+
+
+.part2 .tvName{
+    margin-top: -850px;
+    margin-left:80%;
+    font-size: 75px;
+    color:hsl(0, 0%, 56%);
+}
+
+
+
+
+.part3 .image-url{
+    background: url("/images/0878fc13a53d772b-600x338.jpg");    
+    background-size: cover;
+    background-position: center;
+    /* override */
+    height: 400px;
+}
+
+
+.part3 .left-at-back{
+    /* override */    
+    margin-top: -400px;
+}
+
+.part3 .image-url-back{
+    background: url("/images/wallpapersden.com_tie-fighter-star-wars_1280x2120.jpg");    
+    background-size: cover;
+    background-position: center;
+}
+
+
+.part4 {
+    margin-top: 100px;
+}
+
+.part4 h1{
+    opacity: 0;
+    margin: auto;
+    margin-top: 0px;
+    text-align: center;
+}
