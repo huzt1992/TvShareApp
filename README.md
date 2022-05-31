@@ -1,5 +1,10 @@
-![Untitled](https://user-images.githubusercontent.com/37850959/171139980-6cc2d75b-93bf-49d0-955f-af01517f43dc.gif)
+# Application Demo
 
+![Untitled1-min](https://user-images.githubusercontent.com/37850959/171145501-164ace8e-d008-46c3-8980-efe0c4ee243f.gif)
+
+
+## Application Demo Site
+https://tranquil-bastion-37998.herokuapp.com/
 
 # TvShareApp
 TvShareApp is a tv show share platform.
@@ -11,11 +16,6 @@ Once upon register or login, the user can:
 * Adding specific tv show into user’s collection list
 * Add or delete review to tv show in user’s collection list
 * Review other users’ reviews 
-
-
-## Application Demo Site
-
-https://tranquil-bastion-37998.herokuapp.com/
 
 
 ## Application Demo Site: Authentication
