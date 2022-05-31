@@ -19,11 +19,11 @@ https://tranquil-bastion-37998.herokuapp.com/
 
 In demo site, you can register a new account to access full feature of app, or you can use following provided account:
 
-username: Frank
+username: Frank2
 
-e-mail:huzt@outlook.com
+e-mail:huzt2@outlook.com
 
-password:123
+password:1234
 
 ## Package Installation
 
