@@ -1,3 +1,6 @@
+![Untitled](https://user-images.githubusercontent.com/37850959/171139980-6cc2d75b-93bf-49d0-955f-af01517f43dc.gif)
+
+
 # TvShareApp
 TvShareApp is a tv show share platform.
 
