@@ -1,6 +1,6 @@
 # Application Demo
 
-![Untitled1](https://user-images.githubusercontent.com/37850959/171147808-a5bbda7b-e403-431d-84cf-eda277be5b24.gif)
+![Untitled1](https://user-images.githubusercontent.com/37850959/171150675-711ceee6-fc64-43a2-b612-e26bce42792a.gif)
 
 
 ## Application Demo Site
